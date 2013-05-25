@@ -1,0 +1,8 @@
+{
+  "name": "twitterlisten",
+  "author": "Jay Pozo <jay@jaymatter.com>",
+  "version": "0.1.0",
+  "dependencies": {
+    "oauth": "~0.9.10"
+  }
+}
