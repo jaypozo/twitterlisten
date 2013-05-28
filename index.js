@@ -27,9 +27,14 @@ request.addListener('response', function (response) {
   response.setEncoding('utf8');
   response.addListener('data', function (chunk) {
     try{
-      console.log(chunk.indexOf('{'));
-      console.log(JSON.parse(chunk.substr(chunk.indexOf('{'))).text);
-    } catch(err) { console.log('invalid tweet')};
+      var tweet_length = chunk.substr(0,chunk.indexOf("\r"));
+      var tweet_data_string = chunk.substr(chunk.indexOf("\r")+2, tweet_length-2);
+      console.log(JSON.parse(tweet_data_string).text);
+      console.log('===================================');
+    } catch(err) { 
+      console.log('invalid tweet')
+      console.log(chunk);
+    };
   });
   response.addListener('end', function () {
     console.log('====END====');
