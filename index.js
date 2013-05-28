@@ -3,7 +3,8 @@ var OAuth = require('OAuth')
 ,   consumer_key = auth_data.consumer_key
 ,   consumer_secret = auth_data.consumer_secret
 ,   access_token = auth_data.access_token
-,   access_token_secret = auth_data.access_token_secret;
+,   access_token_secret = auth_data.access_token_secret
+,   https = require('https');
 
 var oauth = new OAuth.OAuth(
   'https://api.twitter.com/oauth/request_token'
@@ -15,12 +16,23 @@ var oauth = new OAuth.OAuth(
   , 'HMAC-SHA1'
 );
 
-oauth.get(
-  'https://stream.twitter.com/1.1/statuses/filter.json?track=kelowna'
+var request = oauth.get(
+  'https://stream.twitter.com/1.1/statuses/filter.json?delimited=length&track=yolo'
   , access_token
-  , access_token_secret,
-  function(err,data,res){
-    if (err) throw err;
-    console.log(require('util').inspect(data));
-  }
+  , access_token_secret
 )
+
+
+request.addListener('response', function (response) {
+  response.setEncoding('utf8');
+  response.addListener('data', function (chunk) {
+    try{
+      console.log(chunk.indexOf('{'));
+      console.log(JSON.parse(chunk.substr(chunk.indexOf('{'))).text);
+    } catch(err) { console.log('invalid tweet')};
+  });
+  response.addListener('end', function () {
+    console.log('====END====');
+  });
+});
+request.end();
