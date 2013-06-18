@@ -9,6 +9,7 @@ twitter_listen.on('tweet_error', function(err){
 })
 
 twitter_listen.on('tweet', function(tweet){
+  console.log('==========');
   console.log(tweet.text);
 })
 
