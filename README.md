@@ -18,3 +18,13 @@ Here's a sample:
   "access_token_secret":"your_access_token_secret_goes_here"
 }
 ```
+
+Usage
+=====
+
+```
+var twitter_listen = new TwitterListen(['#awesome','@someguy','#yoloyolo']);
+twitter_listen.on('event', function(err,event_data){
+  doSomething();
+});
+```
