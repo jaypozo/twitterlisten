@@ -4,7 +4,11 @@ var OAuth = require('OAuth')
 ,   consumer_secret = auth_data.consumer_secret
 ,   access_token = auth_data.access_token
 ,   access_token_secret = auth_data.access_token_secret
-,   https = require('https');
+,   https = require('https')
+,   util = require('util')
+,   events = require('events')
+,   keyword_params = ''
+,   request = {};
 
 var oauth = new OAuth.OAuth(
   'https://api.twitter.com/oauth/request_token'
@@ -16,29 +20,35 @@ var oauth = new OAuth.OAuth(
   , 'HMAC-SHA1'
 );
 
-var request = oauth.get(
-  'https://stream.twitter.com/1.1/statuses/filter.json?delimited=length&track=yolo'
-  , access_token
-  , access_token_secret
-)
+var TwitterListen = function(keyword_array){
+  var self = this;
+  keyword_params = '&track='+keyword_array.join();
 
+  request = oauth.get(
+    'https://stream.twitter.com/1.1/statuses/filter.json?delimited=length'+keyword_params
+    , access_token
+    , access_token_secret
+  )
 
-request.addListener('response', function (response) {
-  response.setEncoding('utf8');
-  response.addListener('data', function (chunk) {
-    try{
-      var tweet_length = chunk.substr(0,chunk.indexOf("\r"));
-      var tweet_data_string = chunk.substr(chunk.indexOf("\r")+2, tweet_length-2);
-      console.log(JSON.parse(tweet_data_string).text);
-      console.log('===================================');
-    } catch(err) { 
-      console.log('invalid tweet')
-      console.log(chunk);
-    };
+  request.addListener('response', function (response) {
+    response.setEncoding('utf8');
+    response.addListener('data', function (chunk) {
+      try{
+        var tweet_length = chunk.substr(0,chunk.indexOf("\r"));
+        var tweet_data_string = chunk.substr(chunk.indexOf("\r")+2, tweet_length-2);
+        var tweet_object = JSON.parse(tweet_data_string);
+        self.emit('tweet',tweet_object);
+      } catch(err) { 
+        self.emit('tweet_error', {message:'invalid_tweet', data:chunk});
+      };
+    });
+    response.addListener('end', function () {
+      console.log('====END====');
+    });
   });
-  response.addListener('end', function () {
-    console.log('====END====');
-  });
-});
 
-request.end();
+  request.end();
+}
+
+util.inherits(TwitterListen,events.EventEmitter);
+module.exports = TwitterListen;
