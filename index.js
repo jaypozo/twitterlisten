@@ -22,7 +22,7 @@ var oauth = new OAuth.OAuth(
 
 var TwitterListen = function(keyword_array){
   var self = this;
-  keyword_params = '&track='+keyword_array.join();
+  keyword_params = '&track='+encodeURIComponent(keyword_array.join());
 
   request = oauth.get(
     'https://stream.twitter.com/1.1/statuses/filter.json?delimited=length'+keyword_params

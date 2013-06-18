@@ -1,7 +1,7 @@
 var TwitterListen = require('../index.js');
 
 
-var twitter_listen = new TwitterListen(["polo","yolo"]);
+var twitter_listen = new TwitterListen(["#polo","#yolo"]);
 
 twitter_listen.on('tweet_error', function(err){
   console.log('error');

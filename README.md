@@ -3,6 +3,13 @@ twitterlisten
 
 Listen to Twitter for keywords.
 
+Install
+=======
+
+```
+npm install twitterlisten
+```
+
 Configure
 =========
 
