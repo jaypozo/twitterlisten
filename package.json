@@ -8,7 +8,6 @@
     "url":"https://github.com/jaypozo/twitterlisten.git"
   },
   "dependencies": {
-    "oauth": "~0.9.10",
-    "pi-gpio": "0.0.2"
+    "oauth": "~0.9.10"
   }
 }
