@@ -1,4 +1,5 @@
 var OAuth = require('OAuth')
+,   fs = require('fs')
 ,   auth_data = fs.existsSync('../auth_data.json') ? require('../auth_data.json') : require('./auth_data.json')
 ,   consumer_key = auth_data.consumer_key
 ,   consumer_secret = auth_data.consumer_secret
