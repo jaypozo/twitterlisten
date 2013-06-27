@@ -31,7 +31,7 @@ Usage
 
 ```
 var twitter_listen = new TwitterListen(['#awesome','@someguy','#yoloyolo']);
-twitter_listen.on('event', function(err,event_data){
-  doSomething();
+twitter_listen.on('tweet', function(event_data){
+  console.log(event_data);
 });
 ```
