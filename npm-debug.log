@@ -1,0 +1,131 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose publish [ '.' ]
+5 verbose read json /Users/jay/src/twitterlisten/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/jay/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+14 verbose folder .
+15 info prepublish twitterlisten@0.1.14
+16 silly lockFile 1f1177db-tar tar://.
+17 verbose lock tar://. /Users/jay/.npm/1f1177db-tar.lock
+18 silly lockFile 4aa2213b-65455-0-4529633391648531-tmp-tgz tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+19 verbose lock tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz /Users/jay/.npm/4aa2213b-65455-0-4529633391648531-tmp-tgz.lock
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile 1f1177db-tar tar://.
+22 silly lockFile 4aa2213b-65455-0-4529633391648531-tmp-tgz tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+23 silly lockFile 4aa2213b-65455-0-4529633391648531-tmp-tgz tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+24 verbose tar unpack /var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+25 silly lockFile 7ca1584e-65455-0-4529633391648531-package tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package
+26 verbose lock tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package /Users/jay/.npm/7ca1584e-65455-0-4529633391648531-package.lock
+27 silly lockFile 4aa2213b-65455-0-4529633391648531-tmp-tgz tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+28 verbose lock tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz /Users/jay/.npm/4aa2213b-65455-0-4529633391648531-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry .npmignore
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm extractEntry index.js
+34 silly gunzTarPerm extractEntry test/index.js
+35 verbose read json /var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package/package.json
+36 silly lockFile 7ca1584e-65455-0-4529633391648531-package tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package
+37 silly lockFile 7ca1584e-65455-0-4529633391648531-package tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package
+38 silly lockFile 4aa2213b-65455-0-4529633391648531-tmp-tgz tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+39 silly lockFile 4aa2213b-65455-0-4529633391648531-tmp-tgz tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/tmp.tgz
+40 verbose from cache /var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package/package.json
+41 verbose tar pack [ '/Users/jay/.npm/twitterlisten/0.1.14/package.tgz',
+41 verbose tar pack   '/var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package' ]
+42 verbose tarball /Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+43 verbose folder /var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package
+44 silly lockFile 7ca1584e-65455-0-4529633391648531-package tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package
+45 verbose lock tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package /Users/jay/.npm/7ca1584e-65455-0-4529633391648531-package.lock
+46 silly lockFile dbcff0e0-twitterlisten-0-1-14-package-tgz tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+47 verbose lock tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz /Users/jay/.npm/dbcff0e0-twitterlisten-0-1-14-package-tgz.lock
+48 silly lockFile 7ca1584e-65455-0-4529633391648531-package tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package
+49 silly lockFile 7ca1584e-65455-0-4529633391648531-package tar:///var/folders/8q/w86d_x0x6jq86j1lh1vdq_6w0000gn/T/npm-23843/1372296865455-0.4529633391648531/package
+50 silly lockFile dbcff0e0-twitterlisten-0-1-14-package-tgz tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+51 silly lockFile dbcff0e0-twitterlisten-0-1-14-package-tgz tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+52 silly lockFile 99a38607-npm-twitterlisten-0-1-14-package /Users/jay/.npm/twitterlisten/0.1.14/package
+53 verbose lock /Users/jay/.npm/twitterlisten/0.1.14/package /Users/jay/.npm/99a38607-npm-twitterlisten-0-1-14-package.lock
+54 silly lockFile 99a38607-npm-twitterlisten-0-1-14-package /Users/jay/.npm/twitterlisten/0.1.14/package
+55 silly lockFile 99a38607-npm-twitterlisten-0-1-14-package /Users/jay/.npm/twitterlisten/0.1.14/package
+56 verbose tar unpack /Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+57 silly lockFile a9845c40-npm-twitterlisten-0-1-14-package tar:///Users/jay/.npm/twitterlisten/0.1.14/package
+58 verbose lock tar:///Users/jay/.npm/twitterlisten/0.1.14/package /Users/jay/.npm/a9845c40-npm-twitterlisten-0-1-14-package.lock
+59 silly lockFile dbcff0e0-twitterlisten-0-1-14-package-tgz tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+60 verbose lock tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz /Users/jay/.npm/dbcff0e0-twitterlisten-0-1-14-package-tgz.lock
+61 silly gunzTarPerm modes [ '755', '644' ]
+62 silly gunzTarPerm extractEntry package.json
+63 silly gunzTarPerm extractEntry .npmignore
+64 silly gunzTarPerm extractEntry README.md
+65 silly gunzTarPerm extractEntry index.js
+66 silly gunzTarPerm extractEntry test/index.js
+67 verbose read json /Users/jay/.npm/twitterlisten/0.1.14/package/package.json
+68 silly lockFile a9845c40-npm-twitterlisten-0-1-14-package tar:///Users/jay/.npm/twitterlisten/0.1.14/package
+69 silly lockFile a9845c40-npm-twitterlisten-0-1-14-package tar:///Users/jay/.npm/twitterlisten/0.1.14/package
+70 silly lockFile dbcff0e0-twitterlisten-0-1-14-package-tgz tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+71 silly lockFile dbcff0e0-twitterlisten-0-1-14-package-tgz tar:///Users/jay/.npm/twitterlisten/0.1.14/package.tgz
+72 verbose from cache /Users/jay/.npm/twitterlisten/0.1.14/package/package.json
+73 verbose chmod /Users/jay/.npm/twitterlisten/0.1.14/package.tgz 644
+74 verbose chown /Users/jay/.npm/twitterlisten/0.1.14/package.tgz [ 501, 20 ]
+75 silly lockFile 3a52ce78- .
+76 silly lockFile 3a52ce78- .
+77 silly publish { name: 'twitterlisten',
+77 silly publish   author: { name: 'Jay Pozo', email: 'jay@jaymatter.com' },
+77 silly publish   description: 'Get events for keywords occuring on the Twitter stream.',
+77 silly publish   version: '0.1.14',
+77 silly publish   repository:
+77 silly publish    { type: 'git',
+77 silly publish      url: 'https://github.com/jaypozo/twitterlisten.git' },
+77 silly publish   dependencies: { oauth: '~0.9.10' },
+77 silly publish   readme: 'twitterlisten\n=============\n\nListen to Twitter for keywords.\n\nInstall\n=======\n\n```\nnpm install twitterlisten\n```\n\nConfigure\n=========\n\nCreate ```auth_data.json``` and add your data from Twitter. https://dev.twitter.com/apps\n\nHere\'s a sample:\n\n```\n{\n  "consumer_key":"your_consumer_key_goes_here",\n  "consumer_secret":"your_consumer_secret_goes_here",\n  "access_token":"your_access_token_goes_here",\n  "access_token_secret":"your_access_token_secret_goes_here"\n}\n```\n\nUsage\n=====\n\n```\nvar twitter_listen = new TwitterListen([\'#awesome\',\'@someguy\',\'#yoloyolo\']);\ntwitter_listen.on(\'event\', function(err,event_data){\n  doSomething();\n});\n```\n',
+77 silly publish   readmeFilename: 'README.md',
+77 silly publish   bugs: { url: 'https://github.com/jaypozo/twitterlisten/issues' },
+77 silly publish   _id: 'twitterlisten@0.1.14',
+77 silly publish   dist: { shasum: '39b38135e8b2d17dc697f093c1ed5892cb027104' },
+77 silly publish   _from: '.' }
+78 verbose url raw twitterlisten
+79 verbose url resolving [ 'https://registry.npmjs.org/', './twitterlisten' ]
+80 verbose url resolved https://registry.npmjs.org/twitterlisten
+81 info trying registry request attempt 1 at 18:34:25
+82 http PUT https://registry.npmjs.org/twitterlisten
+83 http 409 https://registry.npmjs.org/twitterlisten
+84 verbose url raw twitterlisten
+85 verbose url resolving [ 'https://registry.npmjs.org/', './twitterlisten' ]
+86 verbose url resolved https://registry.npmjs.org/twitterlisten
+87 info trying registry request attempt 1 at 18:34:26
+88 http GET https://registry.npmjs.org/twitterlisten
+89 http 200 https://registry.npmjs.org/twitterlisten
+90 error publish fail Cannot publish over existing version.
+90 error publish fail Update the 'version' field in package.json and try again.
+90 error publish fail
+90 error publish fail If the previous version was published in error, see:
+90 error publish fail     npm help unpublish
+90 error publish fail
+90 error publish fail To automatically increment version numbers, see:
+90 error publish fail     npm help version
+91 error System Darwin 12.3.0
+92 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+93 error cwd /Users/jay/src/twitterlisten
+94 error node -v v0.10.12
+95 error npm -v 1.2.32
+96 error code EPUBLISHCONFLICT
+97 verbose exit [ 1, true ]
