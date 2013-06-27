@@ -2,7 +2,7 @@
   "name": "twitterlisten",
   "author": "Jay Pozo <jay@jaymatter.com>",
   "description":"Get events for keywords occuring on the Twitter stream.",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "repository":{
     "type":"git",
     "url":"https://github.com/jaypozo/twitterlisten.git"
